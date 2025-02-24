@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
 <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
@@ -10,6 +13,15 @@
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
+
+    <!-- Linha para o logo (posição à esquerda) -->
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <ImageView fx:id="logoImage" fitHeight="50" fitWidth="50">
+            <image>
+                <Image url="@images/logo.png"/> <!-- Coloque o caminho correto da imagem aqui -->
+            </image>
+        </ImageView>
+    </HBox>
 
     <!-- Título -->
     <Label text="Fundo Rotativo Solidário" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
