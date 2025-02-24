@@ -10,7 +10,7 @@ import java.io.IOException;
 
 public class FundoController {
 
-    // Variável para armazenar o Stage da janela principal
+    // armazenar o Stage da janela principal
     private Stage primaryStage;
 
     // Método para definir o Stage
@@ -20,11 +20,11 @@ public class FundoController {
 
     @FXML
     protected void onPessoaButtonClick() throws IOException {
-        // Carregar a tela de "Pessoa"
+        // tela de "Pessoa" (sem abrir uma nova janela)
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("pessoa-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 400, 400);
 
-        // Atualizar a cena da janela principal
+        //  cena da janela principal para a tela de "Pessoa"
         primaryStage.setScene(scene);
         primaryStage.setTitle("Pessoa");
         primaryStage.show();

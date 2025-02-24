@@ -11,23 +11,21 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        // carrega o arquivo FXML que foi criado
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("fundo-view.fxml"));
-
-        // criar uma janela com o tamanho especificado
+        // carrega o arquivo FXML para a tela principal
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fundo-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 450, 500);
 
-        // definir o título do projeto
+        // passa a referência do stage para o controlador que estava sendo uma DIFICUDADE ENORME de transferir telas
+        FundoController controller = fxmlLoader.getController();
+        controller.setPrimaryStage(stage);
+
+        // definir o título e mostrando a tela
         stage.setTitle("Fundo Rotativo Solidário");
-
-        // definir a janela
         stage.setScene(scene);
-
-        // mostrar a janela na tela
         stage.show();
     }
 
     public static void main(String[] args) {
-        launch();  // aplicação inicia
+        launch();  // Inicia a aplicação JavaFX
     }
 }

@@ -11,7 +11,10 @@
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
 
+    <!-- Título -->
     <Label text="Fundo Rotativo Solidário" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+
+    <!-- Botões -->
     <Button text="Pessoa" onAction="#onPessoaButtonClick"/>
     <Button text="Empréstimos" onAction="#onEmprestimosButtonClick"/>
     <Button text="Parcelas" onAction="#onParcelasButtonClick"/>
