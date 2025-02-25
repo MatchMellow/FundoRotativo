@@ -13,7 +13,7 @@ public class Main extends Application {
     public void start(Stage stage) throws IOException {
         // carrega o arquivo FXML para a tela principal
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fundo-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 450, 500);
+        Scene scene = new Scene(fxmlLoader.load(), 600, 500);
 
         // passa a referência do stage para o controlador que estava sendo uma DIFICUDADE ENORME de transferir telas
         FundoController controller = fxmlLoader.getController();
