@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.fundorotativo.fundo.ContratoController" style="-fx-background-color: #ADD8E6;">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Visualizar Contratos"/>
+
+    <!-- Tabela de contratos com rolagem -->
+    <ScrollPane fitToWidth="true" prefHeight="400" vbarPolicy="ALWAYS" hbarPolicy="NEVER">
+        <TableView fx:id="contratoTable" prefWidth="700">
+            <columns>
+                <TableColumn fx:id="nomeColumn" prefWidth="150.0" text="Nome">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="nome"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="parcelaColumn" prefWidth="150.0" text="Parcela">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="parcela"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="dataColumn" prefWidth="150.0" text="Data de Pagamento">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="data"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="valorColumn" prefWidth="150.0" text="Valor da Parcela">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="valorParcela"/>
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </ScrollPane>
+
+    <!-- Botões para ações -->
+    <HBox spacing="10" alignment="CENTER">
+        <Button onAction="#onMarcarPagoButtonClick" text="Marcar como Pago" />
+        <Button onAction="#onVoltarButtonClick" text="Voltar" />
+    </HBox>
+
+    <!-- Exibição do valor total pago -->
+    <HBox alignment="CENTER" spacing="10">
+        <Label text="Valor Total Pago no Fundo Rotativo: " />
+        <Label fx:id="valorTotalLabel" text="R$ 0.00" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+    </HBox>
+</VBox>

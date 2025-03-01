@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.fundorotativo.fundo.VisualizarSolicitanteController" style="-fx-background-color: #ADD8E6;">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Visualizar Solicitante" />
+
+    <!-- Tabela de solicitantes com rolagem -->
+    <ScrollPane fitToWidth="true" prefHeight="400" vbarPolicy="ALWAYS" hbarPolicy="NEVER">
+        <TableView fx:id="solicitanteTable" prefWidth="700">
+            <columns>
+                <TableColumn fx:id="nomeColumn" prefWidth="132.0" text="Nome">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="nome" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="cpfColumn" prefWidth="136.0" text="CPF">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="cpf" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="rgColumn" prefWidth="131.0" text="RG">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="rg" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="enderecoColumn" minWidth="0.0" prefWidth="128.0" text="Endereço">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="endereco" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="bairroColumn" prefWidth="172.0" text="Bairro">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="bairro" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </ScrollPane>
+
+    <!-- Botões para ações -->
+    <HBox spacing="10" alignment="CENTER">
+        <Button onAction="#onEditarButtonClick" text="Editar" />
+        <Button onAction="#onExcluirButtonClick" text="Excluir" />
+        <Button onAction="#onVoltarButtonClick" text="Voltar" />
+    </HBox>
+</VBox>
