@@ -1,4 +1,0 @@
-Laura,Parcela 1,2025-03-02,20.0,1,true
-Laura,Parcela 1,2025-03-02,20.0,1,true
-Laura,Parcela 1,2025-03-02,20.0,1,true
-Laura,Parcela 1,2025-03-02,20.0,1,true
