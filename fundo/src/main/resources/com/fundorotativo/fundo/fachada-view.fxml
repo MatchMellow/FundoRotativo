@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" spacing="20.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fundorotativo.fundo.Fachada">
+  <padding>
+    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+  </padding>
+
+  <!-- Linha para logo (posição à esquerda) -->
+  <HBox alignment="CENTER_LEFT" spacing="10">
+    <ImageView fx:id="logoImage" fitHeight="50" fitWidth="50">
+      <image>
+        <!-- Caminho para a imagem -->
+        <Image url="@images/logo.png" />
+      </image>
+    </ImageView>
+  </HBox>
+
+  <!-- Título -->
+  <Label prefHeight="52.0" prefWidth="313.0" styleClass="label" text="Fundo Rotativo Solidário" />
+
+  <!-- Botões -->
+  <Button onAction="#onPessoaButtonClick" styleClass="button" text="Pessoa" />
+  <Button onAction="#onEmprestimosButtonClick" styleClass="button" text="Empréstimos" />
+  <Button onAction="#onContratosButtonClick" styleClass="button" text="Contratos" />
+  <Button onAction="#onRelatoriosButtonClick" styleClass="button" text="Relatórios" />
+  <Button onAction="#onSairButtonClick" styleClass="button" text="Sair" />
+
+
+
+
+
+  <!-- Direitos reservados -->
+  <Label graphicTextGap="3.0" prefHeight="17.0" prefWidth="384.0" styleClass="copyrightLabel" text="© Todos os direitos reservados">
+      <font>
+         <Font size="2.0" />
+      </font></Label>
+</VBox>

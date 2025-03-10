@@ -1,0 +1,64 @@
+/* Definindo o estilo da janela principal */
+.root {
+    -fx-background-color: #9ae4e2; /* Cor de fundo suave */
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 10, 0, 0, 5); /* Sombra suave na janela */
+}
+
+/* Estilo para o título */
+.label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #4CAF50; /* Cor verde */
+}
+
+/* Estilo para os botões */
+.button {
+    -fx-font-size: 16px; /* Aumenta o tamanho da fonte */
+    -fx-padding: 10px 20px; /* Adiciona espaçamento interno para tornar o botão maior */
+    -fx-background-color: #4CAF50; /* Cor de fundo do botão */
+    -fx-text-fill: white; /* Cor do texto do botão */
+    -fx-border-radius: 10px; /* Borda arredondada mais suave */
+    -fx-background-radius: 10px; /* Borda arredondada mais suave */
+    -fx-border-color: #388e3c; /* Cor da borda do botão */
+    -fx-border-width: 2px; /* Largura da borda */
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 5, 0, 0, 1); /* Sombrinha suave */
+    -fx-transition: background-color 0.3s ease-in-out; /* Adiciona transição suave no hover */
+}
+
+/* Efeito quando o botão é pressionado */
+.button:pressed {
+    -fx-background-color: #388e3c; /* Cor de fundo ao pressionar */
+}
+
+/* Efeito ao passar o mouse por cima do botão */
+.button:hover {
+    -fx-background-color: #45a049; /* Cor de fundo ao passar o mouse */
+}
+
+/* Efeito ao focar no botão */
+.button:focused {
+    -fx-border-color: #4CAF50; /* Borda verde quando o botão é focado */
+    -fx-border-width: 2px; /* Adiciona largura à borda quando focado */
+}
+
+/* Estilo do texto dentro do campo de texto */
+.text-field {
+    -fx-background-color: #ffffff; /* Cor de fundo branca */
+    -fx-border-color: #ccc; /* Cor da borda do campo de texto */
+    -fx-border-radius: 5px; /* Bordas arredondadas */
+    -fx-padding: 5px; /* Adiciona um pequeno preenchimento */
+}
+
+/* Estilo geral para a tela */
+.root {
+    -fx-background-color: #f0f8ff; /* Cor de fundo suave */
+    -fx-font-family: Arial, sans-serif;
+}
+
+/* Estilo para os direitos reservados */
+.copyrightLabel {
+    font-size: 10px;           /* Fonte pequena */
+    text-align: center;        /* Alinha o texto ao centro */
+    margin-top: 20px;          /* Espaçamento superior para não ficar colado nos botões */
+    color: gray;               /* Cor cinza para discrição */
+}

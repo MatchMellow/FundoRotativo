@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fundorotativo.fundo.RelatorioController" alignment="CENTER" spacing="20" style="-fx-padding: 20;">
+
+    <!-- Título -->
+    <Label text="Relatório do Fundo Solidário" style="-fx-font-size: 24pt; -fx-font-weight: bold;" />
+
+    <!-- Exibição do valor total do fundo -->
+    <Label fx:id="fundoSolidarioLabel" text="Carregando valor..." style="-fx-font-size: 20pt; -fx-text-fill: #2a9d8f;" />
+
+    <!-- Espaçamento -->
+    <HBox spacing="20" alignment="CENTER">
+        <!-- Botão de Voltar -->
+        <Button text="Voltar" onAction="#onVoltarButtonClick" style="-fx-font-size: 14pt; -fx-background-color: #e76f51; -fx-text-fill: white; -fx-padding: 10px 20px;"/>
+    </HBox>
+</VBox>
